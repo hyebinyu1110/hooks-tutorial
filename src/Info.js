@@ -1,19 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-const Info = () =>{
+const Info = () => {
 
     const [name, setName] = useState('');
     const [nickname, setNickname] = useState('');
 
-   const onChangeName = (e)=> {
-    setName(e.target.value);
+    useEffect(() => {
+        console.log(name);
+        
+    },[name]);
 
-   }
+    const onChangeName = (e) => {
+        setName(e.target.value);
 
-   const onChangeNickname = (e)=> {
-    setNickname(e.target.value);
-   }
+    }
+
+    const onChangeNickname = (e) => {
+        setNickname(e.target.value);
+    }
 
 
     return (
@@ -23,7 +28,7 @@ const Info = () =>{
             <div>
                 <b>name: {name}</b>
                 <div>
-                <b>nickname: {nickname}</b>
+                    <b>nickname: {nickname}</b>
                 </div>
             </div>
         </div>
