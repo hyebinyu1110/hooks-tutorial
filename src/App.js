@@ -1,9 +1,12 @@
-import Info from './Info';
+import React from 'react';
+import ValidationSample from './ValidationSample';
 
 function App() {
+
   return (
     <div>
-      <Info />
+      <ValidationSample />
+
     </div>
   );
 }
